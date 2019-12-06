@@ -30,6 +30,10 @@ class Siswa extends Model
             $hitung++;
         }
         return round($total/$hitung);
-    
+    }
+
+    Public function nama_lengkap()
+    {
+        return $this->nama_depan.' '.$this->nama_belakang;
     }
 }

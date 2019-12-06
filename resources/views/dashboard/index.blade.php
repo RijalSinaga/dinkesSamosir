@@ -23,9 +23,9 @@
                                     @php
                                         $rank = 1;
                                     @endphp
-                                    @foreach ($siswa as $s)
+                                    @foreach (ranking5Besar() as $s)
                                     <tr>
-                                        <td>{{$s->nama_depan}}</td>
+                                        <td>{{$s->nama_lengkap()}}</td>
                                         <td>{{$s->rataRataNilai()}}</td>
                                         <td>{{$rank}}</td>
                                     </tr>

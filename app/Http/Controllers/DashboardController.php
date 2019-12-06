@@ -9,13 +9,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $siswa = Siswa::all();
-        $siswa->map(function($s){
-            $s->rataRataNilai = $s->rataRataNilai();
-            return $s;
-        });
-        $siswa->sortByDesc('rataRataNilai');
-        // dd($siswa);
-        return view('dashboard.index',compact('siswa'));
+        return view('dashboard.index');
     }
 } 
