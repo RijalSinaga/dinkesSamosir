@@ -31,7 +31,7 @@
                             <div class="profile-header">
                                 <div class="overlay"></div>
                                 <div class="profile-main">
-                                    <img src="{{$siswa->getAvatar()}}" width="100px" height="120px" class="img-circle" alt="Avatar">
+                                    <img src="{{$siswa->getAvatar()}}" width="100px" height="100px" class="img-circle" alt="Avatar">
                                 <h3 class="name">{{$siswa->nama_depan}}</h3>
                                     <span class="online-status status-available">Available</span>
                                 </div>
@@ -41,7 +41,7 @@
                                             {{$siswa->mapel->count()}} <span>Mata Pelajaran</span>
                                         </div>
                                         <div class="col-md-4 stat-item">
-                                            15 <span>Awards</span>
+                                            {{{$siswa->nilaiSiswa()}}} <span>Nilai</span>
                                         </div>
                                         <div class="col-md-4 stat-item">
                                             2174 <span>Points</span>
@@ -70,6 +70,7 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                 Tambah
                             </button>
+
                         <div class="panel">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Mata Pelajaran</h3>
@@ -99,6 +100,7 @@
         						</table>
         					</div>
                             </div>
+                            
                             <div class="panel">
                                 <div id="chartNilai"></div>
                             </div>

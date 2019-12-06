@@ -41,7 +41,7 @@
                                           {{$guru->mapel->count()}} <span>Mata Pelajaran</span>
                                       </div>
                                       <div class="col-md-4 stat-item">
-                                          15 <span>Awards</span>
+                                          {{$siswa->rataRataNilai()}} <span>Awards</span>
                                       </div>
                                       <div class="col-md-4 stat-item">
                                           2174 <span>Points</span>
