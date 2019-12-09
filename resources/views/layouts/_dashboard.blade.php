@@ -51,7 +51,7 @@
 </head>
 <style>
 body #page-wrapper{
-  background-color: grey;
+  background-color: slategray;
   background-size: 100%;
   /* width:100%; */
   /* height:500%; */

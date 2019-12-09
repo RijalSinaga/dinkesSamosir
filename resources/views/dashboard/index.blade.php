@@ -38,6 +38,26 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-3" style="margin-top:30px;">
+                    <div class="metric">
+                        <span class="icon"><i class="fa fa-users"></i></span>
+                        <p>
+                            <span class="number">{{totalSiswa()}}</span>
+                            <span class="title">Total Siswa</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" style="margin-top:30px;">
+                    <div class="metric">
+                        <span class="icon"><i class="fa fa-users"></i></span>
+                        <p>
+                            <span class="number">{{totalGuru()}}</span>
+                            <span class="title">Total Guru</span>
+                        </p>
+                    </div>
+                </div>
             </div>
         {{-- </div>
     </div>

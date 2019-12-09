@@ -3,7 +3,7 @@
 @section('dashboard')
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Biodata</h1>
+        <h1 class="page-header">Profil Guru</h1>
     </div>
     
 <div class="row">
@@ -41,7 +41,7 @@
                                           {{$guru->mapel->count()}} <span>Mata Pelajaran</span>
                                       </div>
                                       <div class="col-md-4 stat-item">
-                                          {{$siswa->rataRataNilai()}} <span>Awards</span>
+                                          --- <span>Awards</span>
                                       </div>
                                       <div class="col-md-4 stat-item">
                                           2174 <span>Points</span>

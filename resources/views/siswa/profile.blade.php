@@ -1,9 +1,11 @@
 @extends('layouts._dashboard')
-
+@section('header')
+    <link rel="stylesheet" href="{{asset('bootstrap3-editable/bootstrap3-editable/css/bootstrap-editable.css')}}">
+@stop
 @section('dashboard')
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Biodata</h1>
+        <h1 class="page-header">Profil Siswa</h1>
     </div>
     
 <div class="row">
@@ -41,7 +43,7 @@
                                             {{$siswa->mapel->count()}} <span>Mata Pelajaran</span>
                                         </div>
                                         <div class="col-md-4 stat-item">
-                                            {{{$siswa->nilaiSiswa()}}} <span>Nilai</span>
+                                            {{{$siswa->rataRataNilai()}}} <span>Nilai</span>
                                         </div>
                                         <div class="col-md-4 stat-item">
                                             2174 <span>Points</span>
@@ -155,6 +157,7 @@
 
 @section('footer')
 <script src="{{asset('profile/highcharts/code/highcharts.js')}}"></script>
+<script> src="{{asset('bootstrap3-editable/bootstrap3-editable/js/bootstrap-editable.min.js')}}"</script>
 <script>
     Highcharts.chart('chartNilai', {
         chart: {
