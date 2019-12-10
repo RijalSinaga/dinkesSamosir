@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DataTables;
 use App\Siswa;
+use App\Exports\SiswaExport;
+use Maatwebsite\Excel\Facades\Excel;
+use PDF;
+
 
 class SiswaController extends Controller
 {
@@ -125,5 +129,17 @@ class SiswaController extends Controller
         $siswa->mapel()->attach($request->mapel,['nilai' => $request->nilai]);
 
         return redirect ('siswa/'.$idsiswa.'/profile')->with('success','Data success updated!!');
+    }
+
+    public function exportExcel() 
+    {
+        return Excel::download(new SiswaExport, 'siswa.xlsx');
+    }
+
+    Public function exportPdf()
+    {
+        $siswa = Siswa::all();
+        $pdf = PDF::loadView('export.siswaPdf', compact('siswa'));
+        return $pdf->download('Siswa.pdf');
     }
 }

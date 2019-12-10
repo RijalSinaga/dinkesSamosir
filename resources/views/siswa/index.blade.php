@@ -11,6 +11,8 @@
                         <div class="panel-heading">
                             <h1 class="panel-title" style="margin-bottom:10px; color:blue; font-size:20pt;">Data Siswa</h1>
                                 <div class="right mb-3">
+                                    <a href="/siswa/exportExcel" class="btn btn-primary">Print EXCEL</a>
+                                    <a href="/siswa/exportPdf" class="btn btn-primary">Print PDF</a>
                                     <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModalLong">
                                         Add Data
                                     </button>
