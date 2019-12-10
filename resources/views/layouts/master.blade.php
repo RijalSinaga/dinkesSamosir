@@ -13,8 +13,9 @@
     <link href="{{asset('admin/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
 
     <!-- Page-Level Plugin CSS - Dashboard -->
-    {{-- <link href="{{asset('admin/assets/css/plugins/morris/morris-0.4.3.min.css')}}" rel="stylesheet"> --}}
+    <link href="{{asset('admin/assets/css/plugins/morris/morris-0.4.3.min.css')}}" rel="stylesheet">
     <link href="{{asset('admin/assets/css/plugins/timeline/timeline.css')}}" rel="stylesheet">
+    
 
     <!-- SB Admin CSS - Include with every page -->
     <link href="{{asset('admin/assets/css/sb-admin.css')}}" rel="stylesheet">
@@ -22,9 +23,6 @@
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"> --}}
 
     @yield('header')
-
-  
-    
 
 </head>
 

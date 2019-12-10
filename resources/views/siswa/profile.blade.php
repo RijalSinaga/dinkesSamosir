@@ -1,6 +1,7 @@
 @extends('layouts._dashboard')
-@section('header')
-    <link rel="stylesheet" href="{{asset('bootstrap3-editable/bootstrap3-editable/css/bootstrap-editable.css')}}">
+@section('headers')
+    {{-- <link rel="stylesheet" href="{{asset('bootstrap3-editable/bootstrap3-editable/css/bootstrap-editable.css')}}"> --}}
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
 @stop
 @section('dashboard')
 <div class="row">
@@ -89,15 +90,15 @@
         								</tr>
         							</thead>
         							<tbody>
-                                    @foreach ($siswa->mapel as $mapel)
-                                        <tr>
-                                            <td>{{$mapel->kode}}</td>
-                                            <td>{{$mapel->nama}}</td>
-                                            <td>{{$mapel->semester}}</td>
-                                            <td><a href="/guru/{{$mapel->guru_id}}/profile">{{$mapel->guru->nama}}</a></td>
-                                            <td>{{$mapel->pivot->nilai}}</td>
-                                        </tr>
-                                    @endforeach
+                                        @foreach ($siswa->mapel as $mapel)
+                                            <tr>
+                                                <td>{{$mapel->kode}}</td>
+                                                <td>{{$mapel->nama}}</td>
+                                                <td>{{$mapel->semester}}</td>
+                                                <td><a href="/guru/{{$mapel->guru_id}}/profile">{{$mapel->guru->nama}}</a></td>
+                                                <td><a href="#" id="username" data-type="text" data-pk="{{$mapel->id}}" data-url="/post" data-title="Masukkan Nilai">{{$mapel->pivot->nilai}}</a></td>
+                                            </tr>
+                                        @endforeach
         							</tbody>
         						</table>
         					</div>
@@ -156,8 +157,12 @@
 @stop
 
 @section('footer')
+<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> 
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="{{asset('profile/highcharts/code/highcharts.js')}}"></script>
-<script> src="{{asset('bootstrap3-editable/bootstrap3-editable/js/bootstrap-editable.min.js')}}"</script>
+{{-- <script> src="{{asset('bootstrap3-editable/bootstrap3-editable/js/bootstrap-editable.min.js')}}"</script> --}}
+
 <script>
     Highcharts.chart('chartNilai', {
         chart: {
@@ -195,5 +200,10 @@
             data: {!!json_encode($data)!!}
         }]
     });
+    
+    $(document).ready(function() {
+        $('#username').editable();
+    });
+    
 </script>
 @endsection

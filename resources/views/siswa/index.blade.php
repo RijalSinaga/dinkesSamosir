@@ -10,7 +10,7 @@
                     <div class="panel">
                         <div class="panel-heading">
                             <h1 class="panel-title" style="margin-bottom:10px; color:blue; font-size:20pt;">Data Siswa</h1>
-                                <div class="right mb-3">
+                                <div class="right mb-3 ">
                                     <a href="/siswa/exportExcel" class="btn btn-primary">Print EXCEL</a>
                                     <a href="/siswa/exportPdf" class="btn btn-primary">Print PDF</a>
                                     <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModalLong">
@@ -39,7 +39,7 @@
                                         <td align="center">{{$siswa->jenis_kelamin}}</td>
                                         <td>{{$siswa->agama}}</td>
                                         <td>{{$siswa->alamat}}</td>
-                                        <td>{{$siswa->rataRataNilai()}}</td>
+                                        <td align="center">{{$siswa->rataRataNilai()}}</td>
                                         <td align="center">
                                             <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
                                             <a href="/siswa/{{$siswa->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin {{$siswa->nama_depan}} {{$siswa->nama_belakang}} mau dihapus..!!')">Del</a>
