@@ -45,8 +45,8 @@
   <script src="{{asset('admin/assets/js/sb-admin.js')}}"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
     
-
-  @yield('headers')
+  {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> --}}
+  @yield('header')
 
 </head>
 <style>
@@ -65,7 +65,7 @@ body #page-wrapper{
     @include('layouts.includes._navbar')
     @include('layouts.includes._sidebar')
   
-    <div id="page-wrapper" style="background-size=widows: 50px;">
+    <div id="page-wrapper">
         @yield('dashboard')
     </div>
 
@@ -102,6 +102,10 @@ body #page-wrapper{
     <!-- SB Admin Scripts - Include with every page -->
     <script src="{{asset('admin/assets/js/sb-admin.js')}}"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+    {{-- <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>  --}}
+{{-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> --}}
+
     @yield('footer')
 	
 </body>

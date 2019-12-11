@@ -1,6 +1,6 @@
 @extends('layouts._dashboard')
-@section('headers')
-    {{-- <link rel="stylesheet" href="{{asset('bootstrap3-editable/bootstrap3-editable/css/bootstrap-editable.css')}}"> --}}
+@section('header')
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
 @stop
 @section('dashboard')
@@ -96,7 +96,7 @@
                                                 <td>{{$mapel->nama}}</td>
                                                 <td>{{$mapel->semester}}</td>
                                                 <td><a href="/guru/{{$mapel->guru_id}}/profile">{{$mapel->guru->nama}}</a></td>
-                                                <td><a href="#" id="username" data-type="text" data-pk="{{$mapel->id}}" data-url="/post" data-title="Masukkan Nilai">{{$mapel->pivot->nilai}}</a></td>
+                                                <td><a href="#" class="nilai" data-type="text" data-pk="{{$mapel->id}}" data-url="api/siswa/{{$siswa->id}}/editnilai" data-title="Masukkan Nilai">{{$mapel->pivot->nilai}}</a></td>
                                             </tr>
                                         @endforeach
         							</tbody>
@@ -157,11 +157,9 @@
 @stop
 
 @section('footer')
-<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> 
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="{{asset('profile/highcharts/code/highcharts.js')}}"></script>
-{{-- <script> src="{{asset('bootstrap3-editable/bootstrap3-editable/js/bootstrap-editable.min.js')}}"</script> --}}
 
 <script>
     Highcharts.chart('chartNilai', {
@@ -202,7 +200,7 @@
     });
     
     $(document).ready(function() {
-        $('#username').editable();
+        $('.nilai').editable();
     });
     
 </script>
