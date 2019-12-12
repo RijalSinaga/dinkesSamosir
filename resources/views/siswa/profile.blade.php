@@ -1,14 +1,10 @@
-@extends('layouts._dashboard')
+@extends('layouts.master')
 @section('header')
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
 @stop
-@section('dashboard')
+@section('content')
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Profil Siswa</h1>
-    </div>
-    
 <div class="row">
     <div class="col-lg-12">
     <div class="main-content">
@@ -44,10 +40,10 @@
                                             {{$siswa->mapel->count()}} <span>Mata Pelajaran</span>
                                         </div>
                                         <div class="col-md-4 stat-item">
-                                            {{{$siswa->rataRataNilai()}}} <span>Nilai</span>
+                                            {{$siswa->rataRataNilai()}} <span>Nilai</span>
                                         </div>
                                         <div class="col-md-4 stat-item">
-                                            2174 <span>Points</span>
+                                            Rangking <span>--</span>
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +154,7 @@
 
 @section('footer')
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> 
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+{{-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> --}}
 <script src="{{asset('profile/highcharts/code/highcharts.js')}}"></script>
 
 <script>

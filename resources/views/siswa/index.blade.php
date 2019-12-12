@@ -2,23 +2,27 @@
 
 @section('content')
 
-<div class="main"></div>
+{{-- <div class="main"> --}}
     <div class="main-content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel">
                         <div class="panel-heading">
-                            <h1 class="panel-title" style="margin-bottom:10px; color:blue; font-size:20pt;">Data Siswa</h1>
-                                <div class="right mb-3 ">
-                                    <a href="/siswa/exportExcel" class="btn btn-primary">Print EXCEL</a>
-                                    <a href="/siswa/exportPdf" class="btn btn-primary">Print PDF</a>
-                                    <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModalLong">
-                                        Add Data
-                                    </button>
+                            <h1 class="panel-title">Data Siswa</h1>
+                                <div class="right col-lg-3">
+                                    <a href="/siswa/exportExcel" class="btn btn-primary btn-sm float">Print EXCEL</a>
+                                    <a href="/siswa/exportPdf" class="btn btn-success btn-sm">Print PDF</a>
+                                    <div class="right">
+                                        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalLong"><i class="lnr lnr-plus-circle"></i></button>
+
+                                    </div>
                                 </div>
-                            
-                                <table class="table table-hover table-bordered" style="margin-top:10px">
+                            <div>
+                            </div>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-hover table-bordered mt-3">
                                     <thead>
                                         <tr>
                                             <th>Nama Depan</th>
@@ -50,17 +54,18 @@
                                     </tbody>
                                 </table>
                             </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+{{-- </div> --}}
 
 <div class="row">
     <div class="col-6">
-        <h1>DATA SISWA</h1>
+        {{-- <h1>DATA SISWA</h1> --}}
     </div>
 
     <div class="col-6">

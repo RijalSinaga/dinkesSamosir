@@ -23,8 +23,8 @@ class Siswa extends Model
 
     Public function rataRataNilai()
     {
-        $total = 0;
-        $hitung = 0;
+        $total = 0 ;
+        $hitung = 1;
         foreach ($this->mapel as $mapel) {
             $total += $mapel->pivot->nilai;
             $hitung++;

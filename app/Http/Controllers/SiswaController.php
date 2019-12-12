@@ -140,6 +140,6 @@ class SiswaController extends Controller
     {
         $siswa = Siswa::all();
         $pdf = PDF::loadView('export.siswaPdf', compact('siswa'));
-        return $pdf->download('Siswa.pdf');
+        return $pdf->download('Siswa.pdf'); //->with('success','Data success Deleted!!');;
     }
 }

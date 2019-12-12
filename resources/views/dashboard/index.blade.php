@@ -1,18 +1,19 @@
-@extends('layouts._dashboard')
+@extends('layouts.master')
 
-@section('dashboard')
+@section('content')
 {{-- <div class="main">
     <div class="main-content">
         <div class="container-fluid"> --}}
-            <div class="row" >
+            <div class="row-12" >
                 <div class="col-md-6" style="margin-top:30px;">
                     <div class="panel">
                         <div class="panel-heading">
-                            <h3 class="panel-title" style="margin-top:20px;">Ranking</h3>
+                            <h3 class="panel-title" style="margin-top:10px;"><b>Ranking</b></h3>
+                            <hr>
                         </div>
                         <div class="panel-body">
-                            <table class="table table-hover table-striped">
-                                <thead class="adadeh">
+                            <table class="table table-hover table-striped mb-0">
+                                <thead>
                                     <tr>
                                         <th>NAMA</th>
                                         <th>NILAI</th>
@@ -44,14 +45,14 @@
                         <span class="icon"><i class="fa fa-users"></i></span>
                         <p>
                             <span class="number">{{totalSiswa()}}</span>
-                            <span class="title">Total Siswa</span>
+                            <a href="/siswa"><span class="title">Total Siswa</span></a>
                         </p>
                     </div>
                 </div>
                 
                 <div class="col-md-3" style="margin-top:30px;">
                     <div class="metric">
-                        <span class="icon"><i class="fa fa-users"></i></span>
+                        <span class="icon"><i class="fa fa-user"></i></span>
                         <p>
                             <span class="number">{{totalGuru()}}</span>
                             <span class="title">Total Guru</span>
