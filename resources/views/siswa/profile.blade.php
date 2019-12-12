@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('header')
     {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> --}}
-    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+    {{-- <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/> --}}
 @stop
 @section('content')
 <div class="row">
@@ -68,7 +68,7 @@
                         <div class="profile-right">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                 Tambah
-                            </button>
+                            </button><hr>
 
                         <div class="panel">
                             <div class="panel-heading">
@@ -98,7 +98,7 @@
         							</tbody>
         						</table>
         					</div>
-                            </div>
+                            </div><hr>
                             
                             <div class="panel">
                                 <div id="chartNilai"></div>
