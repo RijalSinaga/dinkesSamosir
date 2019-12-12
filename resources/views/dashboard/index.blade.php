@@ -44,8 +44,8 @@
                     <div class="metric">
                         <span class="icon"><i class="fa fa-users"></i></span>
                         <p>
-                            <span class="number">{{totalSiswa()}}</span>
-                            <a href="/siswa"><span class="title">Total Siswa</span></a>
+                            <span class="number"><b>{{totalSiswa()}}</b></span>
+                            <span class="title">Total Siswa</span>
                         </p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                     <div class="metric">
                         <span class="icon"><i class="fa fa-user"></i></span>
                         <p>
-                            <span class="number">{{totalGuru()}}</span>
+                            <span class="number"><b>{{totalGuru()}}</b></span>
                             <span class="title">Total Guru</span>
                         </p>
                     </div>
