@@ -83,6 +83,7 @@
         									<th>SEMESTER</th>
                                             <th>GURU</th>
                                             <th>NILAI</th>
+                                            {{-- <th>PERSEN</th> --}}
         								</tr>
         							</thead>
         							<tbody>

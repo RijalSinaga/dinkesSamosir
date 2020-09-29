@@ -22,14 +22,14 @@
                                 {{ csrf_field() }}
                                   <div class="form-group {{$errors->has('nama_depan') ? ' has-error' : ''}}">
                                     <label for="exampleInputEmail1">Nama Depan</label>
-                                  <input name="nama_depan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled="disabled" placeholder="Nama Depan"  value="{{$siswa->nama_depan}}">
+                                  <input name="nama_depan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Depan"  value="{{$siswa->nama_depan}}">
                                     @if($errors->has('nama_depan'))
                                       <span class="help-block">{{$errors->has('nama_depan')}}</span>
                                     @endif
                                   </div>
                                   <div class="form-group {{$errors->has('nama_belakang') ? ' has-error' : ''}}">
                                       <label for="exampleInputEmail1">Nama Belakang</label>
-                                      <input name="nama_belakang" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled="disabled" placeholder="Nama Belakang" value="{{$siswa->nama_belakang}}">
+                                      <input name="nama_belakang" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Belakang" value="{{$siswa->nama_belakang}}">
                                       @if($errors->has('nama_belakang'))
                                         <span class="help-block">{{$errors->has('nama_belakang')}}</span>
                                       @endif

@@ -27,8 +27,6 @@ class SiswaController extends Controller
             ->rawColumns(['action'])
             ->make(true);
         }
-
-
         $data_siswa = \App\siswa::all();
         return view('siswa.index', ['data_siswa'=>$data_siswa]);
     }

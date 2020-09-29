@@ -20,6 +20,7 @@ Route::post('/postlogin','AuthController@postlogin');
 Route::get('/logout','AuthController@logout');
 
 Route::group(['middleware' => ['auth','checkRole:admin']], function () { 
+    // Route Siswa
     Route::GET('/siswa','SiswaController@index');
     Route::POST('/siswa/create', 'SiswaController@create');
     Route::GET('/siswa/{id}/edit','SiswaController@edit');
@@ -29,8 +30,13 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function () {
     Route::POST('/siswa/{id}/addnilai','SiswaController@addnilai');
     Route::GET('/siswa/exportExcel','SiswaController@exportExcel');
     Route::GET('/siswa/exportPdf','SiswaController@exportPdf');
-    
+    // Route Guru
     Route::GET('/guru/{id}/profile','GuruController@profile');
+    
+    // Kominfo
+    // Route Pegawai
+    // Route::GET('/kominfo/pegawai','KominfoController@index');
+    
 });
 
 Route::group(['middleware' => ['auth','checkRole:admin,siswa']], function () {
