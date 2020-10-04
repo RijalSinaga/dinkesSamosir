@@ -8,6 +8,7 @@ class ApiController extends Controller
 {
     Public function editnilai(Request $request, $id)
     {
-        return $request->all();
+        $siswa = \App\Siswa::find($id);
+        $siswa->mapel()->updateExistingPivot($request->pk,['nilai' => $request->value]);
     }
 }

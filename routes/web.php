@@ -28,11 +28,11 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function () {
     Route::GET('/siswa/{id}/delete','SiswaController@delete');
     Route::GET('/siswa/{id}/profile','SiswaController@profile');
     Route::POST('/siswa/{id}/addnilai','SiswaController@addnilai');
+    Route::get('/siswa/{id}/{idmapel}/deletenilai','SiswaController@deletenilai');
     Route::GET('/siswa/exportExcel','SiswaController@exportExcel');
     Route::GET('/siswa/exportPdf','SiswaController@exportPdf');
     // Route Guru
     Route::GET('/guru/{id}/profile','GuruController@profile');
-    
     // Kominfo
     // Route Pegawai
     // Route::GET('/kominfo/pegawai','KominfoController@index');
