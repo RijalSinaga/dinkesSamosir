@@ -39,7 +39,7 @@ class SiswaController extends Controller
             'email' => 'required|email|unique:users',
             'jenis_kelamin' => 'required',
             'agama' => 'required',
-            'avatar' => 'mimes:jpeg,png',
+            'avatar' => 'mimes:jpeg,png,jpg',
         ]);
         
         // insert ke table User

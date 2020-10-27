@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImunisasiTable extends Migration
+class CreateCovid19Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateImunisasiTable extends Migration
      */
     public function up()
     {
-        Schema::create('imunisasi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->Increments('Imunisasi');
+        Schema::create('covid19', function (Blueprint $table) {
+            $table->Increments('id',9);
+            $table->string('puskesmas',255);
+            $table->string('swab_test',50);
+            $table->string('rapid_test',50);
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateImunisasiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imunisasi');
+        Schema::dropIfExists('covid19');
     }
 }

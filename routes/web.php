@@ -36,6 +36,17 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function () {
     // Kominfo
     // Route Pegawai
     // Route::GET('/kominfo/pegawai','KominfoController@index');
+    Route::GET('/covid19','Covid19Controller@index');
+    Route::POST('/covid19/create', 'Covid19Controller@create');
+    Route::GET('/covid19/{id}/edit','Covid19Controller@edit');
+    Route::POST('/covid19/{id}/update','Covid19Controller@update');
+    Route::GET('/covid19/{id}/delete','Covid19Controller@delete');
+    Route::GET('/covid19/{id}/profile','Covid19Controller@profile');
+    Route::POST('/covid19/{id}/addjlh','Covid19Controller@addjlh');
+    Route::get('/covid19/{id}/{idtest}/deletejlh','Covid19Controller@deletejlh');
+    Route::GET('/covid19/exportExcel','Covid19Controller@exportExcel');
+    Route::GET('/covid19/exportPdf','Covid19Controller@exportPdf');
+    
     
 });
 

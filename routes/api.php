@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('siswa/{id}/editnilai', 'ApiController@editnilai');
+Route::post('covid19/{id}/editjlh', 'ApiController@editjlh');

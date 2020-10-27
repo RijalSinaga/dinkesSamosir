@@ -46,7 +46,7 @@
                                         <td align="center">{{$siswa->rataRataNilai()}}</td>
                                         <td align="center">
                                             <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-                                            <a href="/siswa/{{$siswa->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin {{$siswa->nama_depan}} {{$siswa->nama_belakang}} mau dihapus..!!')">Del</a>
+                                        <a href="#" class="btn btn-danger btn-sm delete" siswa-id="{{$siswa->id}}">Del</a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -95,18 +95,18 @@
                     @endif
             </div>
 
-            <div class="form-group {{$errors->has('nama_belakang') ? ' has-error' : ''}}">
+            <div class="form-group {{$errors->has('nama_depan') ? ' has-error' : ''}}">
                 {{-- <label for="exampleInputEmail1">Nama Belakang</label> --}}
                 <input name="nama_belakang" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Belakang" value="{{old('nama_belakang')}}">
-                @if($errors->has('nama_depan'))
-                    <span class="help-block">{{$errors->has('nama_belakang')}}</span>
+                @if($errors->has('nama_belakang'))
+                    <span class="help-block">{{$errors->has('nama_depan')}}</span>
                 @endif
             </div>
 
             <div class="form-group {{$errors->has('email') ? ' has-error' : ''}}">
                 {{-- <label for="exampleInputEmail1">Email</label> --}}
                 <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" value="{{old('email')}}">
-                @if($errors->has('nama_depan'))
+                @if($errors->has('email'))
                     <span class="help-block">{{$errors->has('email')}}</span>
                 @endif
             </div>
@@ -140,7 +140,7 @@
             <div class="form-group {{$errors->has('avatar') ? ' has-error' : ''}}">
                 {{-- <label for="exampleFormControlTextarea1">Avatar</label> --}}
                 <input type="file" name="avatar" class="form-control">
-                @if($errors->has('nama_depan'))
+                @if($errors->has('avatar'))
                         <span class="help-block">{{$errors->has('avatar')}}</span>
                 @endif
             </div>
@@ -155,6 +155,27 @@
     </div>
 </div>
 
+@stop
+
+@section('footer')
+    <script>
+        $('.delete').click(function(){
+            var siswa_id = $(this).attr('siswa-id');
+            swal({
+            title: "Anda yakin?",
+            text: "Hapus Data dengan id "+siswa_id+"!",
+            icon: "danger",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((willDelete) => {
+            // console.log(willDelete)
+            if (willDelete) {
+                window.location = "/siswa/"+siswa_id+"/delete";
+            }
+            });
+        });
+    </script>
 @endsection
 
 
